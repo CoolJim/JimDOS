@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using Sys = Cosmos.System;
+using Cosmos.System.Graphics;
 
 namespace JimDOS
 {
     public class Kernel : Sys.Kernel
     {
+        Canvas canvas;
         public static void clear()
         {
             Console.WriteLine("");
@@ -64,6 +66,8 @@ namespace JimDOS
 
                     case "shutdown":
                         {
+                            Console.WriteLine("Shutting Down in 5 Seconds");
+                            System.Threading.Thread.Sleep(5000);
                             Cosmos.System.Power.Shutdown();
                             break;
 
@@ -86,14 +90,15 @@ namespace JimDOS
                         {
 
                             Console.WriteLine("JimDOS v1.2.0");
-
+                            Console.WriteLine("Written in C#, using COSMOS.");
                             break;
 
                         }
 
                     case "reboot":
                         {
-
+                            Console.WriteLine("Rebooting in 5 seconds");
+                            System.Threading.Thread.Sleep(5000);
                             Cosmos.System.Power.Reboot();
 
                             break;
