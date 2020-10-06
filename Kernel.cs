@@ -66,8 +66,7 @@ namespace JimDOS
 
                     case "shutdown":
                         {
-                            Console.WriteLine("Shutting Down in 5 Seconds");
-                            System.Threading.Thread.Sleep(5000);
+                            Console.WriteLine("Shutting Down");
                             Cosmos.System.Power.Shutdown();
                             break;
 
@@ -97,8 +96,7 @@ namespace JimDOS
 
                     case "reboot":
                         {
-                            Console.WriteLine("Rebooting in 5 seconds");
-                            System.Threading.Thread.Sleep(5000);
+                            Console.WriteLine("Rebooting");
                             Cosmos.System.Power.Reboot();
 
                             break;
