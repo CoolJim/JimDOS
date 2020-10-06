@@ -10,35 +10,35 @@ namespace JimDOS
         public static void clear()
         {
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
             Console.WriteLine("");
-
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
             Console.WriteLine("");
 
 
@@ -46,6 +46,7 @@ namespace JimDOS
         protected override void BeforeRun()
         {
             Console.Beep(1000, 1000);
+            clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
             Console.WriteLine("Type a command to begin. Type help for basic command usage and user guidance");
             Console.WriteLine(" ");
