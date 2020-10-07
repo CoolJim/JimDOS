@@ -83,6 +83,7 @@ namespace JimDOS
                             Console.WriteLine("shutdown - Shutdown computer");
                             Console.WriteLine("hello - Simple OS command");
                             Console.WriteLine("about - Know about OS");
+                            Console.WriteLine("keys - Show information about key combinations");
 
                             break;
 
@@ -120,6 +121,12 @@ namespace JimDOS
                           Console.Beep(1000, 1000);
 
                           break;
+                        }
+                     case "keys":
+                        {
+                            Console.WriteLine("=====Key Combinations=====");
+                            Console.WriteLine("Ctrl+Alt+Del - Restart");
+                            break;
                         }
 
                     default:
