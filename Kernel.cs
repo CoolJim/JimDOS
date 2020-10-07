@@ -52,7 +52,8 @@ namespace JimDOS
             clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
             Console.WriteLine("Type a command to begin. Type help for basic command usage and user guidance");
-            Console.WriteLine("---");
+            Console.WriteLine("----------");
+            Console.WriteLine("");
         }
 
         protected override void Run()
