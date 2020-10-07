@@ -52,11 +52,12 @@ namespace JimDOS
             clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
             Console.WriteLine("Type a command to begin. Type help for basic command usage and user guidance");
-            Console.WriteLine(" ");
+            Console.WriteLine("---");
         }
 
         protected override void Run()
         {
+          string ver = "1.2.1";
             while (true)
             {
 
@@ -90,7 +91,7 @@ namespace JimDOS
 
                         {
 
-                            Console.WriteLine("JimDOS v1.2.0");
+                            Console.WriteLine("JimDOS v" + ver);
                             Console.WriteLine("Written in C#, using COSMOS.");
                             break;
 
