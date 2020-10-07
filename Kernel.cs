@@ -47,6 +47,7 @@ namespace JimDOS
         }
         protected override void BeforeRun()
         {
+            
             Console.Beep(1000, 1000);
             clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
@@ -75,6 +76,7 @@ namespace JimDOS
                     case "help":
 
                         {
+                            Console.WriteLine("=======Help Menu=======");
                             Console.WriteLine("reboot - Restart computer");
                             Console.WriteLine("shutdown - Shutdown computer");
                             Console.WriteLine("hello - Simple OS command");
@@ -115,7 +117,6 @@ namespace JimDOS
                     default:
                         {
                             Console.WriteLine("No such command found. Type help for more info");
-
                             command = null; break;
                         }
                 }
