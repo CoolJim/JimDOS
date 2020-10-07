@@ -47,7 +47,7 @@ namespace JimDOS
         }
         protected override void BeforeRun()
         {
-            
+
             Console.Beep(1000, 1000);
             clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
@@ -112,6 +112,12 @@ namespace JimDOS
 
                             break;
 
+                        }
+                        case "beep":
+                        {
+                          Console.Beep(1000, 1000);
+
+                          break;
                         }
 
                     default:
