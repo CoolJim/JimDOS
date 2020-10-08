@@ -58,7 +58,7 @@ namespace JimDOS
 
         protected override void Run()
         {
-          string ver = "1.2.1 [Fineliner]";
+          string ver = "1.3.1 [EasyRead]";
             while (true)
             {
 
@@ -95,6 +95,7 @@ namespace JimDOS
 
                             Console.WriteLine("JimDOS v" + ver);
                             Console.WriteLine("Written in C#, using COSMOS.");
+                            Console.WriteLine("");
                             break;
 
                         }
@@ -111,28 +112,35 @@ namespace JimDOS
                     case "hello":
                         {
 
-                            Console.WriteLine("Hello! Thanks for using JimDOS");
+                            Console.WriteLine("Hello user! Thanks for using JimDOS");
+                            Console.WriteLine("");
 
                             break;
 
                         }
                         case "beep":
                         {
+                          Console.WriteLine("Beeping!");
                           Console.Beep(1000, 1000);
+                          Console.WriteLine("");
 
                           break;
                         }
-                     case "keys":
+                     case "keys" || "keystrokes":
                         {
                             Console.WriteLine("=====Key Combinations=====");
-                            Console.WriteLine("Ctrl+Alt+Del - Restart");
+                            Console.WriteLine("Ctrl+Alt+Del - Hard Restart");
+                            Console.WriteLine("");
                             break;
                         }
 
                     default:
                         {
                             Console.WriteLine("No such command found. Type help for more info");
-                            command = null; break;
+                            Console.WriteLine("");
+                            command = null;
+
+                            break;
                         }
                 }
 
