@@ -4,52 +4,34 @@ using System.Text;
 using Sys = Cosmos.System;
 using Cosmos.System.Graphics;
 
+
 namespace JimDOS
 {
     public class Kernel : Sys.Kernel
     {
-        Canvas canvas;
-        public static void clear()
-        {
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
+        
 
-
-        }
         protected override void BeforeRun()
         {
+            Console.WriteLine("Loading ");
+            Console.Write("[#-----]");
+            Console.Clear();
+            Console.WriteLine("Loading ");
+            Console.Write("[##----]");
+            Console.Clear();
+            Console.WriteLine("Loading ");
+            Console.Write("[###---]");
+            Console.Clear();
+            Console.WriteLine("Loading ");
+            Console.Write("[####--]");
+            Console.Clear();
+            Console.WriteLine("Loading ");
+            Console.Write("[#####-]");
+            Console.Clear();
+            Console.WriteLine("Loaded!");
 
             Console.Beep(1000, 1000);
-            clear();
+            Console.Clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
             Console.WriteLine("Type a command to begin. Type help for basic command usage and user guidance");
             Console.WriteLine("----------");
@@ -79,6 +61,9 @@ namespace JimDOS
                     case "help":
 
                         {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.Clear();
                             Console.WriteLine("=======Help Menu=======");
                             Console.WriteLine("reboot - Restart computer");
                             Console.WriteLine("shutdown - Shutdown computer");
@@ -86,6 +71,7 @@ namespace JimDOS
                             Console.WriteLine("about - Know about OS");
                             Console.WriteLine("keys - Show information about key combinations");
                             Console.WriteLine(" ");
+                            Console.ResetColor();
 
                             break;
 
@@ -132,9 +118,13 @@ namespace JimDOS
                         case "keystrokes":
                         case "keystroke":
                         {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.Clear();
                             Console.WriteLine("=====Key Combinations=====");
                             Console.WriteLine("Ctrl+Alt+Del - Hard Restart");
                             Console.WriteLine("");
+                            Console.ResetColor();
                             break;
                         }
 

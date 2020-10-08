@@ -90,6 +90,8 @@
         <USB_EnableGDB>False</USB_EnableGDB>
         <USB_StartCosmosGDB>False</USB_StartCosmosGDB>
         <VMwareEdition>Workstation</VMwareEdition>
+        <VMware_VMwareEdition>Workstation</VMware_VMwareEdition>
+        <USB_VMwareEdition>Workstation</USB_VMwareEdition>
     </PropertyGroup>
 
     <PropertyGroup>
