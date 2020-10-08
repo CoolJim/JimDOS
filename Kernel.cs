@@ -58,7 +58,7 @@ namespace JimDOS
 
         protected override void Run()
         {
-          string ver = "1.2.1";
+          string ver = "1.2.1 [Fineliner]";
             while (true)
             {
 
