@@ -67,7 +67,7 @@ namespace JimDOS
                 switch (command)
                 {
 
-                    case "shutdown":
+                    case "shutdown" || "cease to exist":
                         {
                             Console.WriteLine("Shutting Down");
                             Cosmos.System.Power.Shutdown();
@@ -89,7 +89,7 @@ namespace JimDOS
 
                         }
 
-                    case "about":
+                    case "about" || "info":
 
                         {
 
@@ -100,7 +100,7 @@ namespace JimDOS
 
                         }
 
-                    case "reboot":
+                    case "reboot" || "restart":
                         {
                             Console.WriteLine("Rebooting");
                             Cosmos.System.Power.Reboot();
