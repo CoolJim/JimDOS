@@ -67,7 +67,8 @@ namespace JimDOS
                 switch (command)
                 {
 
-                    case "shutdown" || "cease to exist":
+                    case "shutdown":
+                    case "stop":
                         {
                             Console.WriteLine("Shutting Down");
                             Cosmos.System.Power.Shutdown();
@@ -84,13 +85,14 @@ namespace JimDOS
                             Console.WriteLine("hello - Simple OS command");
                             Console.WriteLine("about - Know about OS");
                             Console.WriteLine("keys - Show information about key combinations");
+                            Console.WriteLine(" ");
 
                             break;
 
                         }
 
-                    case "about" || "info":
-
+                    case "about":
+                    case "info":
                         {
 
                             Console.WriteLine("JimDOS v" + ver);
@@ -100,7 +102,7 @@ namespace JimDOS
 
                         }
 
-                    case "reboot" || "restart":
+                    case "reboot":
                         {
                             Console.WriteLine("Rebooting");
                             Cosmos.System.Power.Reboot();
@@ -126,7 +128,9 @@ namespace JimDOS
 
                           break;
                         }
-                     case "keys" || "keystrokes":
+                        case "keys":
+                        case "keystrokes":
+                        case "keystroke":
                         {
                             Console.WriteLine("=====Key Combinations=====");
                             Console.WriteLine("Ctrl+Alt+Del - Hard Restart");
