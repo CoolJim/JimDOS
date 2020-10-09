@@ -113,6 +113,11 @@ namespace JimDOS
                             Console.ResetColor();
                             break;
                         }
+                    case "clear":
+                        {
+                            Console.Clear();
+                            break;
+                        }
 
                     default:
                         {
