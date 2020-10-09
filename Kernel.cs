@@ -1,35 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Sys = Cosmos.System;
-using Cosmos.System.Graphics;
 
 
 namespace JimDOS
 {
     public class Kernel : Sys.Kernel
     {
-        
+
 
         protected override void BeforeRun()
         {
-            Console.WriteLine("Loading ");
-            Console.Write("[#-----]");
-            Console.Clear();
-            Console.WriteLine("Loading ");
-            Console.Write("[##----]");
-            Console.Clear();
-            Console.WriteLine("Loading ");
-            Console.Write("[###---]");
-            Console.Clear();
-            Console.WriteLine("Loading ");
-            Console.Write("[####--]");
-            Console.Clear();
-            Console.WriteLine("Loading ");
-            Console.Write("[#####-]");
-            Console.Clear();
-            Console.WriteLine("Loaded!");
-
             Console.Beep(1000, 1000);
             Console.Clear();
             Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
@@ -40,7 +20,7 @@ namespace JimDOS
 
         protected override void Run()
         {
-          string ver = "1.3.1 [EasyRead]";
+            string ver = "1.3.1 [EasyRead]";
             while (true)
             {
 
@@ -80,10 +60,13 @@ namespace JimDOS
                     case "about":
                     case "info":
                         {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.BackgroundColor = ConsoleColor.Black;
 
                             Console.WriteLine("JimDOS v" + ver);
                             Console.WriteLine("Written in C#, using COSMOS.");
                             Console.WriteLine("");
+                            Console.ResetColor();
                             break;
 
                         }
@@ -106,17 +89,20 @@ namespace JimDOS
                             break;
 
                         }
-                        case "beep":
+                    case "beep":
                         {
-                          Console.WriteLine("Beeping!");
-                          Console.Beep(1000, 1000);
-                          Console.WriteLine("");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.BackgroundColor = ConsoleColor.Black;
+                            Console.WriteLine("Beeping!");
+                            Console.Beep(1000, 1000);
+                            Console.WriteLine("");
+                            Console.ResetColor();
 
-                          break;
+                            break;
                         }
-                        case "keys":
-                        case "keystrokes":
-                        case "keystroke":
+                    case "keys":
+                    case "keystrokes":
+                    case "keystroke":
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.BackgroundColor = ConsoleColor.Black;
