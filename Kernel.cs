@@ -1,7 +1,6 @@
 ﻿using System;
 using Sys = Cosmos.System;
 
-
 namespace JimDOS
 {
     public class Kernel : Sys.Kernel
@@ -10,15 +9,16 @@ namespace JimDOS
 
         protected override void BeforeRun()
         {
+            string ver = "1.3.1 [EasyRead]";
             Console.Beep(1000, 1000);
             Console.Clear();
-            Console.WriteLine("Hello user! Welcome to JimDOS. You have successfully booted.");
+            Console.WriteLine("JimDOS version " + ver);
             Console.WriteLine("Type a command to begin. Type help for basic command usage and user guidance");
-            Console.WriteLine("----------");
             Console.WriteLine("");
         }
 
         protected override void Run()
+
         {
             string ver = "1.3.1 [EasyRead]";
             while (true)
@@ -50,7 +50,8 @@ namespace JimDOS
                             Console.WriteLine("hello - Simple OS command");
                             Console.WriteLine("about - Know about OS");
                             Console.WriteLine("keys - Show information about key combinations");
-                            Console.WriteLine(" ");
+                            Console.WriteLine("clear - Clear console screen ");
+                            Console.WriteLine("");
                             Console.ResetColor();
 
                             break;
@@ -116,6 +117,9 @@ namespace JimDOS
                     case "clear":
                         {
                             Console.Clear();
+                            Console.WriteLine("JimDOS version " + ver);
+                            Console.WriteLine("Type a command to begin. Type help for basic command usage and user guidance");
+                            Console.WriteLine("");
                             break;
                         }
 
