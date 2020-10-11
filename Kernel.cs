@@ -66,7 +66,9 @@ namespace JimDOS
 
                             Console.WriteLine("JimDOS v" + ver);
                             Console.WriteLine("Written in C#, using COSMOS.");
+                            Console.WriteLine("Thank you for using JimDOS!");
                             Console.WriteLine("");
+                            Console.WriteLine("Source Code: https://github.com/CoolJim/JimDOS [Open Source]");
                             Console.ResetColor();
                             break;
 
